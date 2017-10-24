@@ -36,7 +36,7 @@ const VenueHolder = (props) => {
         </div>
       </div>
       <div>
-        <h4>{data.name}</h4>gut 
+        <h4>{data.name}</h4>
         <h5>{data.location.address1}</h5>
         {props.user.isSignedIn ?
           <div>

@@ -25802,7 +25802,6 @@ var VenueHolder = function VenueHolder(props) {
         null,
         data.name
       ),
-      'gut',
       _react2.default.createElement(
         'h5',
         null,

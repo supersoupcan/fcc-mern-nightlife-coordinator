@@ -25802,6 +25802,7 @@ var VenueHolder = function VenueHolder(props) {
         null,
         data.name
       ),
+      'gut',
       _react2.default.createElement(
         'h5',
         null,
@@ -25830,7 +25831,7 @@ var VenueHolder = function VenueHolder(props) {
       ) : _react2.default.createElement(
         'a',
         {
-          href: 'https://fcc-mern-nightlife-coordinator-supersoupcan.c9users.io' + '/auth/facebook/login/' + props.user.location + '/' + data.id },
+          href: '/auth/facebook/login/' + props.user.location + '/' + data.id },
         _react2.default.createElement(
           'button',
           null,

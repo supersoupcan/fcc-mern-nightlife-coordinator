@@ -57,8 +57,7 @@ const VenueHolder = (props) => {
           :
           <a 
             href={
-              'https://fcc-mern-nightlife-coordinator-supersoupcan.c9users.io' 
-              + '/auth/facebook/login/'
+              '/auth/facebook/login/'
               + props.user.location + '/' 
               + data.id
             }>

@@ -1,19 +1,28 @@
 const userReducer = (state={}, action) => {
   switch(action.type){
-    case "CHANGE_NAME" : {
-      state = Object.assign({}, state, {
-        name : action.payload
-      })
+    case "INIT_USER" : {
+      state = Object.assign({}, state, action.payload)
       break;
     }
-    case "CHANGE_AGE" : {
-      state = Object.assign({}, state, {
-        age : action.payload
-      })
-      break
+    case "FILL_VENUES_FULFILLED" : {
+      state = Object.assign({}, 
+      state, {location : action.payload.data.location});
+      break;
+    }
+    case "ADD_FULFILLED" : {
+      state = Object.assign({},
+        state,
+        {commitments : action.payload.data.newCommitments}
+      )
+    }
+    case "REMOVE_FULFILLED" : {
+        state = Object.assign({},
+        state,
+        {commitments : action.payload.data.newCommitments}
+      )
     }
   }
-  return state;
-};
+  return state
+}
 
 export default userReducer;

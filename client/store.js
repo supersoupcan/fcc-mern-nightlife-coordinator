@@ -1,17 +1,26 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
+import thunk from 'redux-thunk';
+import promise from 'redux-promise-middleware';
 
 import user from "./reducers/userReducer";
-
+import venues from "./reducers/venuesReducer";
+import meta from "./reducers/metaReducer";
 
 export default createStore(
   combineReducers({
     user : user,
+    venues : venues,
+    meta : meta,
   }), {
-    user: {
-      name : "Jacob",
-      age: 22,
-      }
+    venues : [],
+    user : {
+      isSignedIn : false,
+      location : null,
+      commitments : []
     },
-  applyMiddleware(logger)
+    meta : []
+  },
+  applyMiddleware(logger, thunk, promise())
 );
+
